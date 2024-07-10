@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+.pruduct {
+  margin-top: -60px;
+  margin-bottom: 38px;
+}
+
+.tettle {
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+.pruductpage {
+  background-color: rgba(238, 238, 245, 1);
+}
+.linkl {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  font-family: Mulish;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  color: rgba(181, 181, 195, 1);
+}
+.tavarl {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22.59px;
+  text-align: left;
+  color: rgba(33, 33, 33, 1);
+}
+.naya {
+  font-family: Mulish;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  color: rgba(181, 181, 195, 1);
+}
+a.active {
+  //   border: 2px solid red;
+  border-radius: 6px;
+  background-color: rgba(108, 109, 229, 1);
+}
+.econlek {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.econs {
+  padding: 15px 15px;
+}
+.APIdata {
+  margin-left: 40px;
+  max-width: 1179px;
+  // overflow: scroll;
+  scroll-behavior: auto;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+}
+.commit_search {
+  padding: 30px 26px 31px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 11.52px;
+    text-align: left;
+    color: rgba(33, 33, 33, 1);
+  }
+}
+.dataa{
+margin-left: 24px; 
+padding-bottom: 10px;
+}
+
+.tade{
+  padding-top : 21px;
+  padding-bottom: 21px;
+  padding-left: 24px;
+  width: 205px;
+  font-family: Mulish;
+font-size: 16px;
+font-weight: 800;
+line-height: 10.08px;
+text-align: left;
+
+}
+tr{
+  padding-left: 100px;
+}
+
+
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.taded{
+  border-radius: 8px;
+  padding-top : 21px;
+  padding-bottom: 21px;
+  padding-left: 23px;
+  width: 205px;
+  font-family: Mulish;
+font-size: 15px;
+font-weight: 700;
+line-height: 10.8px;
+text-align: left;
+color: 
+rgba(181, 181, 195, 1)
+;
+
+}
+.delete{
+  margin-right: 24px;
+  width: 32px;
+  height: 32px;
+  background-color: 
+  rgba(247, 247, 255, 1);
+  border-radius: 6px;
+  padding: 7px 8px ;
+  margin-left: 8px;
+  cursor: pointer;
+  
+}
+.edit{
+  width: 32px;
+  height: 32px;
+  background-color: 
+  rgba(247, 247, 255, 1);
+  border-radius: 6px;
+  padding: 7px 8px ;
+  margin-left: 8px;
+  cursor: pointer;
+  
+
+}
