@@ -217,7 +217,6 @@ const ManageProducts = () => {
         </div>
       </div>
      <div className="foterr">
-     {/* <Link  to={"mangecategory"}><button className="nove">+ Новый товар</button></Link> */}
      <Link to="/MangeCategory">
           <button className="nove">+ Новый товар</button>
         </Link>
