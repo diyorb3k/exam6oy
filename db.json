@@ -26,15 +26,6 @@
       "price": 24.99,
       "priceInSale": 19.99,
       "description": "A serum with high concentration of Vitamin C for radiant skin."
-    },
-    {
-      "id": "9",
-      "name": "Vitamin C Serum",
-      "code": "VS3003",
-      "brand": "SkinGlow",
-      "price": 24.99,
-      "priceInSale": 19.99,
-      "description": "A serum with high concentration of Vitamin C for radiant skin."
     }
   ]
 }
