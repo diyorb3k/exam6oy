@@ -1,5 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import rasim from "././../../../assets/Корзина.svg";
 import rasim12 from "././../../../assets/Редактировать.svg";
 import axios from "axios"; // Axios kutubxonasini import qilish
@@ -12,17 +14,45 @@ const ManageProducts = () => {
 
   const [albom, setAlbom] = useState([]);
   const [query, setQuery] = useState("");
+  const [products, setPruducts] = useState([]);
+  const [dale, setDale] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/products")
+      .then((response) => {
+        setPruducts(response.data);
+        setDale((p) => !p);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [dale]);
+
+  const deleteproduct = (id) => {
+    axios
+      .delete(`http://localhost:3000/products/${id}`)
+      .then(() => {
+        confirm("Malumot uchirilsinmi")
+        setPruducts(products.filter((product) => product.id !== id));
+        setDale((p) => !p);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
         setAlbom(res?.data);
+        setDale((p) => !p);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [dale]);
 
   const card = albom
     ?.filter((user) => user.name.toLowerCase().includes(query.toLowerCase())) // 'body'ni 'name'ga o'zgartirdim
@@ -56,7 +86,13 @@ const ManageProducts = () => {
                   <img className="edit" src={rasim12} alt="" />
                 </td>
                 <td>
-                  <img className="delete" src={rasim} alt="" />
+                  {products.name}
+                  <img 
+                    onClick={() => deleteproduct  (el.id)}
+                    className="delete"
+                    src={rasim}
+                    alt=""
+                  />
                 </td>
               </tr>
             </thead>
@@ -117,6 +153,11 @@ const ManageProducts = () => {
           {card}
         </div>
       </div>
+     <div className="foterr">
+     <Link  to={"mangecategory"}>{" "}<button className="nove">+ Новый товар</button></Link>
+     <p>© Anymarket 2024</p>
+     </div>
+
     </>
   );
 };

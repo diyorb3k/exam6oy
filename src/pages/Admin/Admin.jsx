@@ -13,8 +13,7 @@ const Admin = () => {
         <div className="saidber">
             <ul>
             <img className='pruduct' src={rasimbos} alt="" />
-         
-         
+  
         <div className='econlek'>
         <NavLink className='pruductt econs' to={'mangeproducts'}><img src={pruduct} alt="rasim chiqmayabdi" />  </NavLink>
          

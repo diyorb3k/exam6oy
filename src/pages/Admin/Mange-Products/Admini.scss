@@ -84,28 +84,25 @@ a.active {
     color: rgba(33, 33, 33, 1);
   }
 }
-.dataa{
-margin-left: 24px; 
-padding-bottom: 10px;
+.dataa {
+  margin-left: 24px;
+  padding-bottom: 10px;
 }
 
-.tade{
-  padding-top : 21px;
+.tade {
+  padding-top: 21px;
   padding-bottom: 21px;
   padding-left: 24px;
   width: 205px;
   font-family: Mulish;
-font-size: 16px;
-font-weight: 800;
-line-height: 10.08px;
-text-align: left;
-
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 10.08px;
+  text-align: left;
 }
-tr{
+tr {
   padding-left: 100px;
 }
-
-
 
 .styled-table {
   border-collapse: collapse;
@@ -113,46 +110,261 @@ tr{
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 20px rgba(0, 3, 0, 0.10);
 }
 
-.taded{
+.taded {
   border-radius: 8px;
-  padding-top : 21px;
+  padding-top: 21px;
   padding-bottom: 21px;
   padding-left: 23px;
   width: 205px;
   font-family: Mulish;
-font-size: 15px;
-font-weight: 700;
-line-height: 10.8px;
-text-align: left;
-color: 
-rgba(181, 181, 195, 1)
-;
-
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 10.8px;
+  text-align: left;
+  color: rgba(181, 181, 195, 1);
 }
-.delete{
+.delete {
   margin-right: 24px;
   width: 32px;
   height: 32px;
-  background-color: 
-  rgba(247, 247, 255, 1);
+  background-color: rgba(247, 247, 255, 1);
   border-radius: 6px;
-  padding: 7px 8px ;
+  padding: 7px 8px;
   margin-left: 8px;
   cursor: pointer;
-  
 }
-.edit{
+.edit {
   width: 32px;
   height: 32px;
-  background-color: 
-  rgba(247, 247, 255, 1);
+  background-color: rgba(247, 247, 255, 1);
   border-radius: 6px;
-  padding: 7px 8px ;
+  padding: 7px 8px;
   margin-left: 8px;
   cursor: pointer;
-  
+}
+// CTOGORIIYA
+.input_grup {
+  background-color: #fff;
+  margin-left: 40px;
+  max-width: 1179px;
+  border-radius: 12px;
+  button {
+    border: none;
+    border-radius: 5px;
+    margin-left: 24px;
+    padding: 10px 16px 10px 16px;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 10.08px;
+    text-align: left;
+    margin-bottom: 6px;
+    margin-top: 2px;
+  }
+  .inputitem {
+    margin-left: 24px;
+    max-width: 1130px;
+    border: 1px solid rgba(240, 240, 246, 1);
+    border-radius: 9px;
+    .inputetim1 {
+      font-family: Mulish;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 10.8px;
+      text-align: left;
+      background-color: rgba(246, 246, 251, 1);
+      width: 764px;
+      padding: 10px;
+      outline: none;
+      border-radius: 6px;
+      border: none;
+    }
+    .etiminput {
+      margin-top: 16px;
+      margin-left: 49px;
+      margin-bottom: 30px;
+      p {
+        margin-bottom: 12px;
+        font-family: Mulish;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 10.8px;
+        text-align: left;
+      }
+    }
+  }
+}
+.inputt2 {
+  margin-left: 48px;
+  margin-bottom: 51px;
+  display: flex;
+  align-items: center;
+  .input11 {
+    font-family: Mulish;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 10.8px;
+    text-align: left;
+    outline: none;
+    width: 362px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(240, 240, 246, 1);
+  }
+  .input2 {
+    font-family: Mulish;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 10.8px;
+    text-align: left;
+    outline: none;
+    width: 362px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(240, 240, 246, 1);
+  }
+}
+form {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  p {
+    padding-bottom: 12px;
+    font-family: Mulish;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 10.8px;
+    text-align: left;
+  }
+}
+.texaria {
+  font-family: Mulish;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 10.8px;
+  text-align: left;
 
+  textarea {
+    padding-left: 30px;
+    padding-top: 10px;
+    margin-left: 66px;
+
+    font-family: Mulish;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 10.8px;
+    text-align: left;
+
+    margin-bottom: 57px;
+    resize: none;
+    outline: none;
+    width: 764px;
+    height: 110px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(246, 246, 251, 1);
+  }
+}
+.lorem {
+  padding-left: 49px;
+  font-family: Mulish;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 10.8px;
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.foriminput {
+  padding-bottom: 49px;
+  margin-left: 77px;
+  display: flex;
+  input {
+    font-family: Mulish;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 10.8px;
+    text-align: left;
+
+    border: none;
+    padding: 10px;
+    background-color: rgba(246, 246, 251, 1);
+    border-radius: 6px;
+    outline: none;
+  }
+}
+.saxranit{
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  margin-left: 453px;
+  gap: 8px;
+}
+.foter_add{
+  margin-top: 19px;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+}
+.save{
+  cursor: pointer;
+  border-radius: 6px;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  background-color: rgba(27, 197, 141, 1);
+  font-family: Mulish;
+font-size: 14px;
+font-weight: 800;
+line-height: 10.08px;
+text-align: left;
+
+}
+.otmin{
+
+  cursor: pointer;
+  border-radius: 6px;
+  color:rgba(128, 128, 155, 1);
+  padding: 15px 20px;
+  border: none;
+  font-family: Mulish;
+font-size: 14px;
+font-weight: 800;
+line-height: 10.08px;
+text-align: left; 
+}
+
+.foterr{
+  margin-left: 40px;
+  margin-top: 30px;
+  width: 1179px;
+  display: flex;
+  justify-content: space-between;
+  p{
+    font-family: Mulish;
+font-size: 14px;
+font-weight: 700;
+line-height: 10.08px;
+text-align: right;
+color: rgba(128, 128, 155, 1);
+  }
+}
+
+.nove{
+cursor: pointer;
+color: #fff;
+font-family: Mulish;
+font-size: 14px;
+font-weight: 800;
+line-height: 10.08px;
+text-align: left;
+padding: 15px 20px;
+ background-color: rgba(27, 197, 141, 1);
+ border: none;
+ border-radius: 6px;
 }
