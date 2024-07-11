@@ -1,6 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { MdDelete } from "react-icons/md";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import rasim from "././../../../assets/Корзина.svg";
 import rasim12 from "././../../../assets/Редактировать.svg";
@@ -11,7 +9,7 @@ import "../../Admin/Admin.css";
 import { useEffect, useState } from "react";
 const ManageProducts = () => {
   const navigate = useNavigate();
-
+  const [edit, setEdit] = useState(null);
   const [albom, setAlbom] = useState([]);
   const [query, setQuery] = useState("");
   const [products, setPruducts] = useState([]);
@@ -19,7 +17,7 @@ const ManageProducts = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3300/products")
       .then((response) => {
         setPruducts(response.data);
         setDale((p) => !p);
@@ -31,7 +29,7 @@ const ManageProducts = () => {
 
   const deleteproduct = (id) => {
     axios
-      .delete(`http://localhost:3000/products/${id}`)
+      .delete(`http://localhost:3300/products/${id}`)
       .then(() => {
         confirm("Malumot uchirilsinmi")
         setPruducts(products.filter((product) => product.id !== id));
@@ -44,7 +42,7 @@ const ManageProducts = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3300/products")
       .then((res) => {
         setAlbom(res?.data);
         setDale((p) => !p);
@@ -55,7 +53,7 @@ const ManageProducts = () => {
   }, [dale]);
 
   const card = albom
-    ?.filter((user) => user.name.toLowerCase().includes(query.toLowerCase())) // 'body'ni 'name'ga o'zgartirdim
+    ?.filter((user) => user.name.toLowerCase().includes(query.toLowerCase())) 
     .map((el) => {
       return (
         <div className="form card" key={el.id}>
@@ -118,6 +116,71 @@ const ManageProducts = () => {
           </div>
         </div>
       </div>
+      <div className="Editt">
+        {edit ? (
+          <form className="Edit1"  action="" onSubmit={handelSubmit}>
+           <div>
+           <p>Наименование</p>
+            <input
+              className="inputetim1"
+
+              type="text"
+              value={edit.name}
+              onChange={(e) =>
+                setEdit((prev) => ({ ...prev, name: e.target.value }))
+              }
+            />
+           </div>
+           <div className="inpiut_edit">
+           <p>Артикул	</p>
+            <input
+              className="inputetim1"
+              type="text"
+              value={edit.code}
+              onChange={(e) =>
+                setEdit((prev) => ({ ...prev, code: e.target.value }))
+              }
+            />
+           </div>
+        <div className="inpiut_edit1">
+        <p>	Бренд</p>
+            <input
+              className="inputetim1"
+              type="text"
+              value={edit.brand}
+              onChange={(e) =>
+                setEdit((prev) => ({ ...prev, brand: e.target.value }))
+              }
+            />
+        </div>
+          <div className="inpiut_edit2">
+            <p>Цена</p>
+          <input
+              className="inputetim1"
+              type="text"
+              value={edit.price}
+              onChange={(e) =>
+                setEdit((prev) => ({ ...prev, price: e.target.value }))
+              }
+            />
+          </div>
+          <div  className="inpiut_edit3">
+          <p>Цена со скидкой</p>
+            <input
+              className="inputetim1"
+              type="text"
+              value={edit.priceInSale}
+              onChange={(e) =>
+                setEdit((prev) => ({ ...priceInSale, priceInSale: e.target.value }))
+              }
+            />
+          </div>
+            <button className="submitbtn">submit</button>
+          </form>
+        ) : (
+          <></>
+        )}
+      </div>
       <div className="APIdata">
         <div className="commit_search">
           <h4>Все товары (5)</h4>
@@ -154,7 +217,10 @@ const ManageProducts = () => {
         </div>
       </div>
      <div className="foterr">
-     <Link  to={"mangecategory"}>{" "}<button className="nove">+ Новый товар</button></Link>
+     {/* <Link  to={"mangecategory"}><button className="nove">+ Новый товар</button></Link> */}
+     <Link to="/MangeCategory">
+          <button className="nove">+ Новый товар</button>
+        </Link>
      <p>© Anymarket 2024</p>
      </div>
 

@@ -10,8 +10,10 @@ function App() {
   return (
     <>
     <Routes>
-  <Route path='/admin' element={<Admin/>}>
-  <Route path='mangeproducts' element={<MangeProducts/>}/>
+  <Route path='/*' element={<Admin/>}>
+  <Route path='admin' element={<MangeProducts/>}>
+  
+  </Route>
   <Route path='mangecategory' element={<MangeCategory/>}/>
 </Route>
 <Route path='*' element={<NotFaund/>}/>
